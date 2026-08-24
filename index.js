@@ -206,7 +206,8 @@ async function main() {
           "Enter the ID of the task you wanna delete: ",
         );
         if (!deleteTaskId) {
-          console.log(`Task with ID "${deleteTaskId}" not found.`);
+          console.log("Task ID cannot be empty");
+          break;
         }
         const taskIndex = tasks.findIndex((task) => task.id === deleteTaskId);
         if (taskIndex !== -1) {
